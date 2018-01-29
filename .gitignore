@@ -19,9 +19,13 @@ sites/*/services.local.yml
 # ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
 /sites/default/**/files
 /sites/default/**/private
+/sites/default/settings.php
+/sites/*.dd
+/sites/sites.php
 
 # Ignore SimpleTest multi-site environment.
 sites/simpletest
+sites/default/settings.php
 
 # Packages #
 ############
@@ -60,4 +64,8 @@ Thumbs.db
 
 # Things in the core directory that Drupal 8 commits in the repository.
 !core/**/*.gz
+
+#IDE plugins
+.idea
+
 
