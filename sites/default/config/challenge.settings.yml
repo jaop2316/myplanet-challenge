@@ -4,8 +4,11 @@ _core:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: 'http://myplanet-challenge-jo.dd:8083/themes/contrib/bootstrap/favicon.ico'
+  url: 'http://myplanet-challenge-jo.dd:8083/themes/custom/challenge/favicon.ico'
   use_default: true
+schemas:
+  bootstrap: 8000
+  challenge: 8000
 features:
   comment_user_picture: true
   comment_user_verification: true
@@ -15,6 +18,17 @@ logo:
   path: ''
   url: ''
   use_default: true
-schemas:
-  bootstrap: 8000
-  challenge: 8000
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
+  hidden: ''
+fluid_container: 1
+table_responsive: '-1'
+table: ''
