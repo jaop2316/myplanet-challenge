@@ -1,0 +1,19 @@
+uuid: 07a69016-4922-434a-a819-319845d30100
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name
+    - paragraphs.paragraphs_type.room
+id: paragraph.room.field_name
+field_name: field_name
+entity_type: paragraph
+bundle: room
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,9 @@
+uuid: 537c5b67-8f18-4647-8b66-4eea5acacf7b
+langcode: en
+status: true
+dependencies: {  }
+id: room
+label: Room
+icon_uuid: null
+description: 'This paragraph contains rooms information.'
+behavior_plugins: {  }

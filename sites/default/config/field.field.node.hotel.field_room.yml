@@ -1,0 +1,31 @@
+uuid: 676b4325-1e0c-44d3-abbb-fa113e87ed99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room
+    - node.type.hotel
+    - paragraphs.paragraphs_type.room
+  module:
+    - entity_reference_revisions
+id: node.hotel.field_room
+field_name: field_room
+entity_type: node
+bundle: hotel
+label: Rooms
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      room: room
+    target_bundles_drag_drop:
+      room:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

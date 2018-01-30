@@ -1,0 +1,36 @@
+uuid: ca2ffb08-7810-4837-9331-295e64644415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.room.field_image
+    - field.field.paragraph.room.field_name
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.room
+  module:
+    - image
+id: paragraph.room.default
+targetEntityType: paragraph
+bundle: room
+mode: default
+content:
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

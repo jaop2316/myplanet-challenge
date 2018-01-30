@@ -1,0 +1,22 @@
+uuid: da95ec28-626d-41b6-8a20-3cf9ef460023
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.destinations
+  module:
+    - text
+id: node.destinations.body
+field_name: body
+entity_type: node
+bundle: destinations
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

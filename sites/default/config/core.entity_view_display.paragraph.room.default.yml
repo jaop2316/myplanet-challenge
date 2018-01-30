@@ -1,0 +1,33 @@
+uuid: 15a509b2-80c1-43f1-af48-b072204866d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.room.field_image
+    - field.field.paragraph.room.field_name
+    - paragraphs.paragraphs_type.room
+  module:
+    - image
+id: paragraph.room.default
+targetEntityType: paragraph
+bundle: room
+mode: default
+content:
+  field_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
