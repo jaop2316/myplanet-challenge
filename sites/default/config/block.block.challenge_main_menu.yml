@@ -1,0 +1,26 @@
+uuid: a2834755-b17e-41e4-8031-c8a27eada0f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - challenge
+_core:
+  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
+id: challenge_main_menu
+theme: challenge
+region: navigation_collapsible
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

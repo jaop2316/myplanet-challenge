@@ -1,0 +1,22 @@
+uuid: 4234ef69-2d09-440b-ba21-194a6bce7059
+langcode: en
+status: true
+dependencies:
+  theme:
+    - challenge
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: challenge_local_tasks
+theme: challenge
+region: content
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
