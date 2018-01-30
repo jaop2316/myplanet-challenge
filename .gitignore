@@ -68,4 +68,8 @@ Thumbs.db
 #IDE plugins
 .idea
 
+# Node Modules #
+######################
+node_modules
+themes/custom/challenge/yarn\.lock
 
