@@ -1,0 +1,20 @@
+uuid: 973629ca-aabc-429e-953f-fa3efa2e5667
+langcode: en
+status: false
+dependencies:
+  module:
+    - admin_enquires
+  theme:
+    - challenge
+id: enquireformblock_2
+theme: challenge
+region: content
+weight: 0
+provider: null
+plugin: enquire_block
+settings:
+  id: enquire_block
+  label: 'Enquire Form block'
+  provider: admin_enquires
+  label_display: visible
+visibility: {  }

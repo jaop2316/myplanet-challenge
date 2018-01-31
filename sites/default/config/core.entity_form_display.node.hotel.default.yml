@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.hotel.body
+    - field.field.node.hotel.field_form
     - field.field.node.hotel.field_room
     - node.type.hotel
   module:
@@ -86,4 +87,5 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_form: true

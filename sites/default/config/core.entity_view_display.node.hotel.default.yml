@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.hotel.body
+    - field.field.node.hotel.field_form
     - field.field.node.hotel.field_room
     - node.type.hotel
   module:
+    - block_field
     - ds
     - entity_reference_revisions
     - fences
@@ -118,7 +120,7 @@ third_party_settings:
       region: content
     group_enquiry:
       children:
-        - node_post_date
+        - field_form
       parent_name: group_groups
       weight: 2
       format_type: tab
@@ -139,18 +141,13 @@ third_party_settings:
     regions:
       content:
         - node_title
-        - node_post_date
         - group_info
         - group_groups
+        - field_form
         - group_enquiry
         - body
         - field_room
     fields:
-      node_post_date:
-        plugin_id: node_post_date
-        weight: 0
-        label: hidden
-        formatter: hidden
       node_title:
         plugin_id: node_title
         weight: 0
@@ -167,6 +164,13 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_form:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
     region: content
   field_room:
     type: entity_reference_revisions_entity_view

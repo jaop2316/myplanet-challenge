@@ -1,0 +1,25 @@
+uuid: 59839362-1841-4455-8118-83e564fc7a1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_form
+    - node.type.hotel
+  module:
+    - block_field
+id: node.hotel.field_form
+field_name: field_form
+entity_type: node
+bundle: hotel
+label: Form
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    plugin_id: enquire_block
+    settings: {  }
+default_value_callback: ''
+settings:
+  plugin_ids: {  }
+field_type: block_field
