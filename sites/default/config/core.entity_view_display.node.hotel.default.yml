@@ -7,9 +7,155 @@ dependencies:
     - field.field.node.hotel.field_room
     - node.type.hotel
   module:
+    - ds
     - entity_reference_revisions
+    - fences
+    - field_group
+    - panelizer
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          3c457487-d971-4923-b8bb-cd83007b3db3:
+            id: 'entity_field:node:body'
+            label: Description
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: content
+            weight: 0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 3c457487-d971-4923-b8bb-cd83007b3db3
+          045f03cb-ac39-4882-a9c5-fc3f991d5d5b:
+            id: 'entity_field:node:field_room'
+            label: Rooms
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_revisions_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: content
+            weight: 1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 045f03cb-ac39-4882-a9c5-fc3f991d5d5b
+          e6d7fb67-58a8-4293-a893-9da9264e0d6f:
+            id: 'entity_field:node:title'
+            label: Title
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: content
+            weight: -1
+            uuid: e6d7fb67-58a8-4293-a893-9da9264e0d6f
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+        id: panels_variant
+        label: Default
+        uuid: ce564701-3daf-4483-91e1-e58813888e5f
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:hotel:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+  field_group:
+    group_groups:
+      children:
+        - group_info
+        - group_enquiry
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        label: Groups
+        direction: vertical
+        id: ''
+        classes: ''
+      label: Groups
+      region: content
+    group_info:
+      children:
+        - body
+        - field_room
+      parent_name: group_groups
+      weight: 1
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+      label: Info
+      region: content
+    group_enquiry:
+      children:
+        - node_post_date
+      parent_name: group_groups
+      weight: 2
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Enquiry
+      region: content
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - node_title
+        - node_post_date
+        - group_info
+        - group_groups
+        - group_enquiry
+        - body
+        - field_room
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 0
+        label: hidden
+        formatter: hidden
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
 id: node.hotel.default
 targetEntityType: node
 bundle: hotel
@@ -18,20 +164,27 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   field_room:
     type: entity_reference_revisions_entity_view
-    weight: 102
-    label: above
+    weight: 4
+    label: hidden
     settings:
       view_mode: default
       link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: card
+        fences_label_tag: div
+        fences_label_classes: ''
+      ds:
+        ds_limit: ''
     region: content
-  links:
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  links: true

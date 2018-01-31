@@ -1,4 +1,4 @@
-uuid: a8d2dda3-214d-4d58-9314-b0632b35d00f
+uuid: 7398787b-7d66-4595-82df-2eeccdc6dbcc
 langcode: en
 status: true
 dependencies:
@@ -13,8 +13,8 @@ label: Panels
 variant: panels_variant
 variant_settings:
   blocks:
-    1f7ac1c1-5484-4388-b55d-521440247d9c:
-      id: 'views_block:destinations-block_1'
+    31a963ec-ace3-411f-bdc7-84fb800a20c1:
+      id: 'views_block:destinations-destinations_homepage'
       label: ''
       provider: views
       label_display: visible
@@ -22,10 +22,10 @@ variant_settings:
       items_per_page: none
       region: content
       weight: 0
-      uuid: 1f7ac1c1-5484-4388-b55d-521440247d9c
+      uuid: 31a963ec-ace3-411f-bdc7-84fb800a20c1
       context_mapping: {  }
   id: panels_variant
-  uuid: b61c7933-ca94-424e-945d-ebd55412e74a
+  uuid: b0c65eb2-b378-43be-a7c7-bbf5037c4125
   label: null
   weight: 0
   layout: layout_onecol

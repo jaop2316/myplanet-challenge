@@ -14,5 +14,5 @@ type: hotel
 description: 'It''s a content type to add hotels information in a destination.'
 help: ''
 new_revision: true
-preview_mode: 1
-display_submitted: true
+preview_mode: 0
+display_submitted: false

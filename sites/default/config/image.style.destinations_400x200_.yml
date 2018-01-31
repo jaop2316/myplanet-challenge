@@ -1,0 +1,14 @@
+uuid: 9e86fa42-a2af-41dc-bc9e-6fe2a7a825d2
+langcode: en
+status: true
+dependencies: {  }
+name: destinations_400x200_
+label: 'Destinations (400x200)'
+effects:
+  383f6482-2d72-4372-b429-d92c9e62d37d:
+    uuid: 383f6482-2d72-4372-b429-d92c9e62d37d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 200

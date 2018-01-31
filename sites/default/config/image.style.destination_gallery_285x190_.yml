@@ -1,0 +1,14 @@
+uuid: 36227d00-dc62-4bf5-9175-5d1ef8f2c0ae
+langcode: en
+status: true
+dependencies: {  }
+name: destination_gallery_285x190_
+label: 'Destination Gallery (285x190)'
+effects:
+  8907744c-3e60-4874-a270-f8ddd4149acb:
+    uuid: 8907744c-3e60-4874-a270-f8ddd4149acb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 285
+      height: 190

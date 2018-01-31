@@ -9,48 +9,365 @@ dependencies:
     - field.field.node.destinations.field_image_gallery
     - node.type.destinations
   module:
+    - ds
+    - fences
+    - field_group
     - image
+    - panelizer
+    - slick
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          dba5e71f-c5dd-48c7-a79c-b97e0760a8be:
+            id: 'entity_field:node:body'
+            label: Description
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: content
+            weight: 0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: dba5e71f-c5dd-48c7-a79c-b97e0760a8be
+          56461cdf-d6a8-4aa2-aeb3-85afa5de5a74:
+            id: 'entity_field:node:field_hero_image'
+            label: 'Hero image'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: image_url
+              settings:
+                image_style: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: content
+            weight: -2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 56461cdf-d6a8-4aa2-aeb3-85afa5de5a74
+          af6256a5-3c75-4372-8c71-171269811ee2:
+            id: 'entity_field:node:field_hotels'
+            label: Hotels
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: content
+            weight: 2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: af6256a5-3c75-4372-8c71-171269811ee2
+          bc99e7da-3d02-4178-9246-35da6806eb7f:
+            id: 'entity_field:node:field_image_gallery'
+            label: GALLERY
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: slick_image
+              settings:
+                optionset: custom
+                style: ''
+                skin: grid
+                background: false
+                layout: ''
+                caption:
+                  title: '0'
+                  alt: '0'
+                optionset_thumbnail: ''
+                skin_thumbnail: ''
+                thumbnail_position: ''
+                thumbnail_caption: ''
+                image_style: destination_gallery_285x190_
+                thumbnail_style: ''
+                thumbnail_effect: ''
+                media_switch: ''
+                ratio: ''
+                grid_header: ''
+                grid: 3
+                grid_medium: null
+                grid_small: 2
+                visible_items: null
+                preserve_keys: false
+                sizes: ''
+                breakpoints:
+                  xs:
+                    image_style: ''
+                    width: ''
+                    breakpoint: ''
+                  sm:
+                    image_style: ''
+                    width: ''
+                    breakpoint: ''
+                  md:
+                    image_style: ''
+                    width: ''
+                    breakpoint: ''
+                  lg:
+                    image_style: ''
+                    width: ''
+                    breakpoint: ''
+                  xl:
+                    image_style: ''
+                    width: ''
+                    breakpoint: ''
+                override: false
+                overridables:
+                  arrows: '0'
+                  autoplay: '0'
+                  dots: '0'
+                  draggable: '0'
+                  infinite: '0'
+                  mouseWheel: '0'
+                  randomize: '0'
+                  variableWidth: '0'
+                cache: 0
+                current_view_mode: default
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: content
+            weight: 1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: bc99e7da-3d02-4178-9246-35da6806eb7f
+          071de274-e212-48ca-8ab0-d64f7b47fc8e:
+            id: 'entity_field:node:title'
+            label: Title
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: content
+            weight: -1
+            uuid: 071de274-e212-48ca-8ab0-d64f7b47fc8e
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+        id: panels_variant
+        label: Default
+        uuid: 2bb09d74-ca98-4fee-b398-80691477cd56
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:destinations:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+  field_group:
+    group_groups:
+      children:
+        - group_details
+        - group_hotels
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        label: Groups
+        direction: vertical
+        id: ''
+        classes: ''
+      label: Groups
+      region: content
+    group_details:
+      children:
+        - body
+        - field_image_gallery
+      parent_name: group_groups
+      weight: 3
+      format_type: tab
+      format_settings:
+        label: Details
+        formatter: open
+        description: ''
+        id: ''
+        classes: ''
+      label: Details
+      region: content
+    group_hotels:
+      children:
+        - field_hotels
+      parent_name: group_groups
+      weight: 5
+      format_type: tab
+      format_settings:
+        label: Hotels
+        formatter: open
+        description: ''
+        id: ''
+        classes: ''
+      label: Hotels
+      region: content
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_hero_image
+        - node_title
+        - group_groups
+        - group_details
+        - field_hotels
+        - body
+        - field_image_gallery
+        - group_hotels
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
 id: node.destinations.default
 targetEntityType: node
 bundle: destinations
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 101
+    weight: 4
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_hero_image:
-    weight: 102
-    label: above
+    type: image_url
+    weight: 0
+    region: content
+    label: hidden
     settings:
       image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
-    region: content
   field_hotels:
-    weight: 104
-    label: above
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: hidden
     settings:
       link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      ds:
+        ds_limit: ''
   field_image_gallery:
-    weight: 103
-    label: above
+    type: slick_image
+    weight: 5
+    region: content
+    label: hidden
     settings:
+      style: ''
+      optionset: custom
+      optionset_thumbnail: ''
+      skin: grid
+      skin_thumbnail: ''
       image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  links:
-    weight: 100
-    region: content
-hidden: {  }
+      thumbnail_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      ratio: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      cache: 0
+      sizes: ''
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: default
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      grid_header: ''
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      iframe_lazy: true
+      icon: ''
+      view_mode: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_style: ''
+      box_media_style: ''
+      responsive_image_style: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      ds:
+        ds_limit: ''
+hidden:
+  links: true
