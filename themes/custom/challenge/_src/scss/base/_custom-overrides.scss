@@ -1,1 +1,11 @@
 // Override to default bootstrap classes.
+.navbar {
+  margin-bottom: 0;
+}
+.tabs-left > .nav-tabs{
+  float : none !important;
+}
+
+.nav > li{
+  display: inline-block;
+}

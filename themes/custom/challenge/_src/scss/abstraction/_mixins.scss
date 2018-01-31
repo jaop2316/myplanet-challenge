@@ -47,3 +47,120 @@
     @include set-font-size($font-lg * 1px);
   }
 }
+
+// Section Container
+//
+// Set styles for section container.
+@mixin section-container($max-width: 1030, $bg-color: $c-solid-white) {
+  @include set-padding(0 8%, 0 10%, 0 90, 45 88 70);
+  @include set-width(92%, 90%, 90%, 100%);
+  position: relative;
+  max-width: remcalc($max-width);
+  background-color: $bg-color;
+}
+
+// Padding
+//
+// Set padding for elements.
+@mixin set-padding($pad-xs, $pad-sm, $pad-md, $pad-lg) {
+  @include breakpoint(xs) {
+    padding: remcalc($pad-xs);
+  }
+
+  @include breakpoint(sm) {
+    padding: remcalc($pad-sm);
+  }
+
+  @include breakpoint(md) {
+    padding: remcalc($pad-md);
+  }
+
+  @include breakpoint(lg) {
+    padding: remcalc($pad-lg);
+  }
+}
+
+// Margin
+//
+// Set margin for elements.
+@mixin set-margin($mar-xs, $mar-sm, $mar-md, $mar-lg) {
+  @include breakpoint(xs) {
+    margin: remcalc($mar-xs);
+  }
+
+  @include breakpoint(sm) {
+    margin: remcalc($mar-sm);
+  }
+
+  @include breakpoint(md) {
+    margin: remcalc($mar-md);
+  }
+
+  @include breakpoint(lg) {
+    margin: remcalc($mar-lg);
+  }
+}
+
+// Width
+//
+// Set width for elements.
+@mixin set-width($width-xs, $width-sm, $width-md, $width-lg) {
+  @include breakpoint(xs) {
+    width: $width-xs;
+  }
+
+  @include breakpoint(sm) {
+    width: $width-sm;
+  }
+
+  @include breakpoint(md) {
+    width: $width-md;
+  }
+
+  @include breakpoint(lg) {
+    width: $width-lg;
+  }
+}
+
+// Height
+//
+// Set height for elements
+@mixin set-height($height-xs, $height-sm, $height-md, $height-lg) {
+  @include breakpoint(xs) {
+    height: remcalc($height-xs);
+  }
+
+  @include breakpoint(sm) {
+    height: remcalc($height-sm);
+  }
+
+  @include breakpoint(md) {
+    height: remcalc($height-md);
+  }
+
+  @include breakpoint(lg) {
+    height: remcalc($height-lg);
+  }
+}
+
+// Min-height
+//
+// Set min-height for elements
+
+@mixin set-min-height($min-height-xs, $min-height-sm, $min-height-md, $min-height-lg) {
+  @include breakpoint(xs) {
+    min-height: remcalc($min-height-xs);
+  }
+
+  @include breakpoint(sm) {
+    min-height: remcalc($min-height-sm);
+  }
+
+  @include breakpoint(md) {
+    min-height: remcalc($min-height-md);
+  }
+
+  @include breakpoint(lg) {
+    min-height: remcalc($min-height-lg);
+  }
+}

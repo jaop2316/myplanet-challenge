@@ -1,0 +1,7 @@
+//
+// Global typography
+//
+p {
+  @include font-size(16, 18, 20, 20);
+  margin-bottom: remcalc(32);
+}

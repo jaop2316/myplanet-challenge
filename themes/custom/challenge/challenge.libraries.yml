@@ -25,3 +25,15 @@ custom-scripts:
 font-awesome:
     js:
       https://use.fontawesome.com/bbff17cba3.js: { external: true }
+
+slick:
+  version: 1.5
+  css:
+    component:
+      css/components/slick.css: {}
+  js:
+    js/slick.min.js: {}
+    js/slick.config.js: {}
+  dependencies:
+      - core/drupal
+      - core/jquery

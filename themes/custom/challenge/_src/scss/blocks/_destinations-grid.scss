@@ -1,0 +1,58 @@
+//
+// Styles for destination grid.
+//
+
+.destinations-grid {
+
+  .block-title {
+    text-align: center;
+    @include font-size(30, 33, 56, 56);
+  }
+
+  .view-content {
+    @include section-container(1385, $c-bianca);
+    margin: 0 auto;
+    display: table;
+    width: 100%;
+  }
+
+  .views-row {
+    @include set-width(50%, 50%, 33.3333%, 33.3333%);
+    display: table-cell;
+    width: 50%;
+    float: left;
+    padding: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    color: $c-solid-black;
+    @include font-size(16, 16, 18, 26);
+  }
+
+  .views-field-title {
+
+    @include breakpoint(lg) {
+      width: 250px;
+      text-align: center;
+      padding: remcalc(20);
+      margin: 0 auto;
+    }
+
+  }
+
+  .custom-wrapper {
+    background-color: $c-solid-white;
+    height: remcalc(190);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    @include breakpoint(sm) {
+      height: remcalc(224);
+    }
+
+    @include breakpoint(md) {
+      height: remcalc(330);
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+// Functions
+
+// Function for transform pixels in rems.
+@function remcalc($values) {
+  @if $values != 'auto' {
+    @return rem-calc($values, 10px);
+  }
+}
+// Function that returns important value.
+@function important($values) {
+  @return $values + !important;
+}

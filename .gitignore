@@ -22,6 +22,7 @@ sites/*/services.local.yml
 /sites/default/settings.php
 /sites/*.dd
 /sites/sites.php
+/sites/default/services.yml
 
 # Ignore SimpleTest multi-site environment.
 sites/simpletest
