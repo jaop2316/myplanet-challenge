@@ -1,0 +1,5 @@
+name: Admin Enquires
+type: module
+description: This module allow to user add enquires for hotels in destinations.
+package: Custom
+core: 8.x

@@ -1,0 +1,6 @@
+admin_enquires.admin:
+  title: 'Hotel Enquires'
+  description: 'Enquires module'
+  parent: system.admin_structure
+  route_name: admin_enquires
+  weight: 100
