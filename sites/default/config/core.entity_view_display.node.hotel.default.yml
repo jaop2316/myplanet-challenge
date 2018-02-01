@@ -141,10 +141,10 @@ third_party_settings:
     regions:
       content:
         - node_title
-        - group_info
         - group_groups
-        - field_form
+        - group_info
         - group_enquiry
+        - field_form
         - body
         - field_room
     fields:
@@ -167,7 +167,7 @@ content:
     region: content
   field_form:
     weight: 2
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: block_field
