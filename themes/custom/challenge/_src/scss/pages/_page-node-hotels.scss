@@ -29,4 +29,26 @@
     border-radius: 50%;
   }
 
+  .field--name-field-name {
+    @include font-size(16, 16, 18, 26);
+    text-align: center;
+    padding: 0;
+
+    @include breakpoint(sm) {
+      margin: 0 auto;
+    }
+
+    @include breakpoint(md) {
+      width: 150px;
+      padding: remcalc(20);
+
+    }
+  }
+
+  .field--name-field-image {
+    img {
+      margin: 0 auto;
+    }
+  }
+
 }
