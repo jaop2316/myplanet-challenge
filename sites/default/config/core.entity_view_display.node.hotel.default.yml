@@ -184,7 +184,7 @@ content:
         fences_field_tag: div
         fences_field_classes: ''
         fences_field_item_tag: div
-        fences_field_item_classes: card
+        fences_field_item_classes: col-md-4
         fences_label_tag: div
         fences_label_classes: ''
       ds:

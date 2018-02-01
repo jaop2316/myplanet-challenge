@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.room.field_name
     - paragraphs.paragraphs_type.room
   module:
+    - fences
     - image
 id: paragraph.room.default
 targetEntityType: paragraph
@@ -19,7 +20,14 @@ content:
     settings:
       image_style: ''
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
     type: image
     region: content
   field_name:
@@ -27,7 +35,14 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
     type: string
     region: content
 hidden: {  }
