@@ -29,15 +29,33 @@
   a {
     color: $c-solid-black;
     @include font-size(16, 16, 18, 26);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   .views-field-title {
+    text-align: center;
+    padding: 0;
+    margin: 5px auto 0;
+
+    @include breakpoint(sm){
+      margin: 0 auto;
+    }
+
+    @include breakpoint(md) {
+      width: 150px;
+      padding: remcalc(10);
+
+    }
 
     @include breakpoint(lg) {
       width: 250px;
-      text-align: center;
+      transform: translate(0, 10%);
       padding: remcalc(20);
-      margin: 0 auto;
+
     }
 
   }
@@ -51,6 +69,10 @@
     }
 
     @include breakpoint(md) {
+      height: remcalc(230);
+    }
+
+    @include breakpoint(lg) {
       height: remcalc(330);
     }
   }
