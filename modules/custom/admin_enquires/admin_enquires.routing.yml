@@ -3,11 +3,11 @@ admin_enquires:
     defaults:
       _controller: Drupal\admin_enquires\Controller\AdminEnquiresController::content
     requirements:
-      _permission: 'access content'
+      _permission: 'use admin enquires'
 
 admin_enquires_show:
     path: admin/structure/admin_enquires/detail/{id}
     defaults:
        _controller: Drupal\admin_enquires\Controller\AdminEnquiresController::detail
     requirements:
-      _permission: 'access content'
+      _permission: 'use admin enquires'

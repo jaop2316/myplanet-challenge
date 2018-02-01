@@ -17,3 +17,15 @@ function admin_enquires_theme($existing, $type, $theme, $path) {
         ],
     ];
 }
+
+
+/**
+ * Implements hook_permission()
+ */
+function admin_enquires_permission() {
+  return array(
+    'use admin enquires' => array(
+      'title' => t('Use the admin enquires'),
+    ),
+  );
+}
