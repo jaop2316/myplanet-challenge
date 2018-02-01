@@ -1,0 +1,38 @@
+<?php
+
+function admin_enquires_schema() {
+  $schema['admin_enquires'] = array(
+    'fields' => array(
+      'id'=>array(
+        'type'=>'serial',
+        'not null' => TRUE,
+      ),
+      'name'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'email'=>array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'phone'=>array(
+              'type' => 'varchar',
+              'length' => 60,
+            ),
+      'inquiry'=>array(
+                    'type' => 'varchar',
+                    'length' => 500,
+                    'not null' => TRUE,
+                  ),
+      'hotelid'=>array(
+              'type'=>'int',
+            ),
+    ),
+    'primary key' => array('id'),
+  );
+
+  return $schema;
+
+}

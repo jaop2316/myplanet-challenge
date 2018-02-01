@@ -1,6 +1,13 @@
 admin_enquires:
     path: admin/structure/admin_enquires
     defaults:
-      _controller: Drupal\admin_enquires\Controller\AdminEnquiresController::hello
+      _controller: Drupal\admin_enquires\Controller\AdminEnquiresController::content
+    requirements:
+      _permission: 'access content'
+
+admin_enquires_show:
+    path: admin/structure/admin_enquires/detail/{id}
+    defaults:
+       _controller: Drupal\admin_enquires\Controller\AdminEnquiresController::detail
     requirements:
       _permission: 'access content'
