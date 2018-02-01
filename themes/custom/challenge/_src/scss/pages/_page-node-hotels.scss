@@ -19,4 +19,14 @@
     padding: remcalc(20);
   }
 
+  .slick-prev::before {
+    color: $c-solid-black;
+    border-radius: 50%;
+  }
+
+  .slick-next::before {
+    color: $c-solid-black;
+    border-radius: 50%;
+  }
+
 }

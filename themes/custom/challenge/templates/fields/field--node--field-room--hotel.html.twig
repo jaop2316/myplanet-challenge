@@ -44,7 +44,6 @@
 'field--type-' ~ field_type|clean_class,
 'field--label-' ~ label_display,
 'multiple-items',
-'slider',
 
 ] %}
 {% set title_classes = [
@@ -63,7 +62,7 @@ label_display == 'visually_hidden' ? 'sr-only',
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field--item col-md-4') }}>{{ item.content }}</div>
+      <div{{ attributes.addClass(classes, 'field--item') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}

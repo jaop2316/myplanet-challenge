@@ -2,10 +2,31 @@
 .navbar {
   margin-bottom: 0;
 }
-.tabs-left > .nav-tabs{
-  float : none !important;
+
+.tabs-left > .nav-tabs {
+  float: none !important;
+  li {
+    background-color: $c-astral;
+    border-radius: 4px 0 0 4px;
+    a {
+      color: $c-solid-white;
+      margin-bottom: 0 !important;
+    }
+
+    a:hover {
+      color: $c-solid-black;
+    }
+  }
+
+  .active {
+    background-color: $c-bianca;
+  }
+
+  .active > a {
+    color: $c-solid-black;
+  }
 }
 
-.nav > li{
+.nav > li {
   display: inline-block;
 }

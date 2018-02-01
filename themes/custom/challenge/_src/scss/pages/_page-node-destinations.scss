@@ -19,4 +19,21 @@
     padding: remcalc(20);
   }
 
+  .field--name-field-hotels a {
+    @include font-size(16, 20, 25, 30);
+    padding: remcalc(20);
+    text-decoration: underline;
+    color: $c-solid-black;
+
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .slick-arrow::before{
+    color: $c-solid-black;
+  }
+
+
 }
