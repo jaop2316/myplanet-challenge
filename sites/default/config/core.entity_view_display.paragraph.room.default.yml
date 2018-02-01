@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.room.field_image
     - field.field.paragraph.room.field_name
+    - image.style.destination_gallery_285x190_
     - paragraphs.paragraphs_type.room
   module:
     - fences
@@ -18,7 +19,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: destination_gallery_285x190_
       image_link: ''
     third_party_settings:
       fences:
