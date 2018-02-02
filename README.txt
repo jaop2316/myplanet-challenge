@@ -22,14 +22,16 @@ DRUPAL CHALLENGE - Jessica Olivo.
 
  3. Run the next drush command :
 
-drush site-install config_installer --account-name=<ACCOUNT-NAME> --account-pass=<ACCOUNT-PASSWORD>
---account-mail=<ACCOUNT-EMAL>config_installer_sync_configure_form.sync_directory=sites/default/config
+drush site-install config_installer --account-name=<ACCOUNT-NAME> \
+--account-pass=<ACCOUNT-PASSWORD> --account-mail=<ACCOUNT-EMAL> \
+config_installer_sync_configure_form.sync_directory=sites/default/config \
 --db-url=<DB_LOCATION_AND_LOGIN_CREDENTIALS> --yes
 
 Sample:
 
-drush site-install config_installer --account-name=admin --account-pass=admin --account-mail=jessica.olivo@jobsity.io
-config_installer_sync_configure_form.sync_directory=sites/default/config
+drush site-install config_installer --account-name=admin --account-pass=admin \
+--account-mail=jessica.olivo@jobsity.io \
+config_installer_sync_configure_form.sync_directory=sites/default/config \
 --db-url=mysql://root:@127.0.0.1:33067/drupalchallenge --yes
 
 The command execution start Drupal installation, this take a while.
