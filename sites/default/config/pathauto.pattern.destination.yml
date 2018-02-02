@@ -1,0 +1,22 @@
+uuid: 680d912c-45b4-4ee3-8fe5-576187f68b57
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: destination
+label: Destination
+type: 'canonical_entities:node'
+pattern: 'destination/[node:title]'
+selection_criteria:
+  7e3d38b3-99e7-46c2-9b00-58aafcd85f89:
+    id: node_type
+    bundles:
+      destinations: destinations
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7e3d38b3-99e7-46c2-9b00-58aafcd85f89
+selection_logic: and
+weight: -5
+relationships: {  }
