@@ -5,30 +5,30 @@
 .destinations-grid {
 
   .block-title {
-    text-align: center;
     @include font-size(30, 33, 56, 56);
+    text-align: center;
   }
 
   .view-content {
     @include section-container(1385, $c-bianca);
-    margin: 0 auto;
     display: table;
+    margin: 0 auto;
     width: 100%;
   }
 
   .views-row {
     @include set-width(50%, 50%, 33.3333%, 33.3333%);
     display: table-cell;
-    width: 50%;
     float: left;
+    margin-bottom: 2rem;
     padding: 2rem;
     position: relative;
-    margin-bottom: 2rem;
+    width: 50%;
   }
 
   a {
-    color: $c-solid-black;
     @include font-size(16, 16, 18, 26);
+    color: $c-solid-black;
     text-decoration: underline;
 
     &:hover {
@@ -37,24 +37,24 @@
   }
 
   .views-field-title {
-    text-align: center;
-    padding: 0;
     margin: 5px auto 0;
+    padding: 0;
+    text-align: center;
 
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
       margin: 0 auto;
     }
 
     @include breakpoint(md) {
-      width: 150px;
       padding: remcalc(10);
+      width: 150px;
 
     }
 
     @include breakpoint(lg) {
-      width: 250px;
-      transform: translate(0, 10%);
       padding: remcalc(20);
+      transform: translate(0, 10%);
+      width: 250px;
 
     }
 
@@ -62,8 +62,9 @@
 
   .custom-wrapper {
     background-color: $c-solid-white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
     height: remcalc(190);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
     @include breakpoint(sm) {
       height: remcalc(224);
     }

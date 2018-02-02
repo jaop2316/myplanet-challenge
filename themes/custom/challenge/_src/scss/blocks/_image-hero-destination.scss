@@ -3,9 +3,9 @@
 //
 
 .image-hero-destination {
-  height: 40rem;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  transform: translate3d(0px, 0px, 0px);
+  height: 40rem;
+  transform: translate3d(0, 0, 0);
 }

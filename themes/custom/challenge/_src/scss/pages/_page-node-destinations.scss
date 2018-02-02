@@ -21,9 +21,9 @@
 
   .field--name-field-hotels a {
     @include font-size(16, 20, 25, 30);
+    color: $c-solid-black;
     padding: remcalc(20);
     text-decoration: underline;
-    color: $c-solid-black;
 
   }
 
@@ -31,9 +31,8 @@
     text-decoration: none;
   }
 
-  .slick-arrow::before{
+  .slick-arrow::before {
     color: $c-solid-black;
   }
-
 
 }

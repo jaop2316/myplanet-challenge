@@ -20,27 +20,27 @@
   }
 
   .slick-prev::before {
-    color: $c-solid-black;
     border-radius: 50%;
+    color: $c-solid-black;
   }
 
   .slick-next::before {
-    color: $c-solid-black;
     border-radius: 50%;
+    color: $c-solid-black;
   }
 
   .field--name-field-name {
     @include font-size(16, 16, 18, 26);
-    text-align: center;
     padding: 0;
+    text-align: center;
 
     @include breakpoint(sm) {
       margin: 0 auto;
     }
 
     @include breakpoint(md) {
-      width: 150px;
       padding: remcalc(20);
+      width: 150px;
 
     }
   }
