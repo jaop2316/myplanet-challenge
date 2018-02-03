@@ -59,7 +59,6 @@ class EnquireForm extends FormBase
     $values = array(
       'email' => $form_state->getValue('email'),
     );
-
     if (!valid_email_address($values['email'])) {
       $form_state->setErrorByName('phone_number', $this->t('Please Enter a valid email address.'));
     }
@@ -75,13 +74,10 @@ class EnquireForm extends FormBase
       'phone' => $form_state->getValue('phone'),
       'inquiry' => $form_state->getValue('inquiry'),
       'hotelid' => $form_state->getValue('hotel_id'),
-
     );
     $node = \Drupal::routeMatch()->getParameter('node');
     $nid = $node->id();
-
     AdminEnquiresController::add($values['name'], $values['email'], $values['phone'], $values['inquiry'], $nid);
-
     drupal_set_message($this->t('Your enquires is being submitted!', array('@emp_name' => $form_state->getValue('name'))));
 
     return;
