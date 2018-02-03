@@ -26,17 +26,17 @@ function admin_enquires_schema() {
         'not null' => TRUE,
       ),
       'phone'=>array(
-              'type' => 'varchar',
-              'length' => 60,
-            ),
+        'type' => 'varchar',
+        'length' => 60,
+      ),
       'inquiry'=>array(
-                    'type' => 'varchar',
-                    'length' => 500,
-                    'not null' => TRUE,
-                  ),
+        'type' => 'varchar',
+        'length' => 500,
+        'not null' => TRUE,
+      ),
       'hotelid'=>array(
-              'type'=>'int',
-            ),
+         'type'=>'int',
+      ),
     ),
     'primary key' => array('id'),
   );

@@ -19,7 +19,7 @@ class EnquireForm extends BlockBase
   /**
    * {@inheritdoc}
    */
-  public function build(){
+  public function build() {
     $form = \Drupal::formBuilder()->getForm('Drupal\admin_enquires\Form\EnquireForm');
     return $form;
   }
