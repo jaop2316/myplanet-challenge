@@ -16,15 +16,12 @@ use Drupal\Core\Block\BlockBase;
 class EnquireForm extends BlockBase
 {
 
-    /**
-     * {@inheritdoc}
-     */
-
-    public function build() {
-
-        $form = \Drupal::formBuilder()->getForm('Drupal\admin_enquires\Form\EnquireForm');
-
-        return $form;
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function build(){
+    $form = \Drupal::formBuilder()->getForm('Drupal\admin_enquires\Form\EnquireForm');
+    return $form;
+  }
 
 }

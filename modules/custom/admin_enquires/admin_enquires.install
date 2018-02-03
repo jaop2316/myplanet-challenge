@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * @file
+ * Install the admin_enquires module.
+ */
+
+/**
+ * Create a new database table in schema
+ */
 function admin_enquires_schema() {
   $schema['admin_enquires'] = array(
     'fields' => array(
